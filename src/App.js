@@ -13,7 +13,7 @@ export default function App() {
 function MemeGeneratorForm() {
   const [topText, setTopText] = useState('_');
   const [bottomText, setBottomText] = useState('_');
-  const [selectedTemplate, setSelectedTemplate] = useState('michael-scott');
+  const [selectedTemplate, setSelectedTemplate] == useState('michael-scott');
   const generatedMeme = `https://api.memegen.link/images/${selectedTemplate}/${topText}/${bottomText}.png`;
 
   function handleTopTextChange(event) {
@@ -47,13 +47,13 @@ function MemeGeneratorForm() {
           <img
             src={selectedTemplate}
             data-test-id="meme-image"
-            alt="default Meme"
+            alt="default meme"
           />
         ) : (
           <img
             src={generatedMeme}
             data-test-id="meme-image"
-            alt="randomly generated Meme"
+            alt="randomly generated meme"
           />
         )}
       </div>
