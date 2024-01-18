@@ -1,7 +1,6 @@
 import { saveAs } from 'file-saver';
 import React, { useState } from 'react';
 
-// Exporting the App component
 export default function Memeform() {
   return (
     <div>
@@ -11,16 +10,13 @@ export default function Memeform() {
   );
 }
 
-// Defining the MemeForm component
 function MemeForm() {
-  // Setting up state variables for topText, bottomText, and selectedTemplate
   const [topText, setTopText] = useState('_');
   const [bottomText, setBottomText] = useState('_');
   const [selectedTemplate, setSelectedTemplate] = useState('oprah');
   const defaultMeme = `https://api.memegen.link/images/${selectedTemplate}/_/_.png`;
   const generatedMeme = `https://api.memegen.link/images/${selectedTemplate}/${topText}/${bottomText}.png`;
 
-  // Event handler to update the states based on user input
   function handleTopTextChange(event) {
     setTopText(event.target.value);
   }
@@ -33,15 +29,12 @@ function MemeForm() {
     setSelectedTemplate(event.target.value);
   }
 
-  // Event handler for the "Download image" button click
   const handleClick = () => {
-    // Invoking the saveAs function with the meme URL to trigger the download
     saveAs(
       `https://api.memegen.link/images/${selectedTemplate}/${topText}/${bottomText}.png`,
     );
   };
 
-  // Rendering the MemeForm component
   return (
     <div>
       {/* Input for input boxes with associated label */}
