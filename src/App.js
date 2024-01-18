@@ -1,7 +1,7 @@
 import { saveAs } from 'file-saver';
 import React, { useState } from 'react';
 
-export default function App() {
+export default function MemeGenerator() {
   return (
     <div>
       <h1>React Meme Generator</h1>
@@ -13,7 +13,7 @@ export default function App() {
 function MemeGeneratorForm() {
   const [topText, setTopText] = useState('_');
   const [bottomText, setBottomText] = useState('_');
-  const [selectedTemplate, setSelectedTemplate] == useState('michael-scott');
+  const [selectedTemplate, setSelectedTemplate] = useState('michael-scott');
   const generatedMeme = `https://api.memegen.link/images/${selectedTemplate}/${topText}/${bottomText}.png`;
 
   function handleTopTextChange(event) {
@@ -59,7 +59,7 @@ function MemeGeneratorForm() {
         )}
       </div>
 
-      <div className="App">
+      <div className="MemeGenerator">
         <button onClick={handleClick}>Download</button>
       </div>
     </div>
