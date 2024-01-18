@@ -36,6 +36,7 @@ function MemeGeneratorForm() {
     <div>
       <label htmlFor="top-text">Top text</label>
       <input id="top-text" onChange={handleTopTextChange} />
+
       <label htmlFor="bottom-text">Bottom text</label>
       <input id="bottom-text" onChange={handleBottomTextChange} />
 
