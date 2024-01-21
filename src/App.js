@@ -60,7 +60,7 @@ function MemeGeneratorForm() {
         )}
       </div>
 
-      <div id="button" className="MemeGenerator">
+      <div className="MemeGenerator">
         <button onClick={handleClick}>Download</button>
       </div>
     </div>
