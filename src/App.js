@@ -6,7 +6,7 @@ export default function MemeGenerator() {
   return (
     <div>
       <h1>Meme Generator</h1>
-      <MemeGeneratorForm />
+      <MemeGeneratorForm/>
     </div>
   );
 }
