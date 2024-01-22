@@ -61,7 +61,9 @@ function MemeGeneratorForm() {
       </div>
 
       <div className="MemeGenerator">
-        <button onClick={handleClick}>Download</button>
+        <button onClick={handleClick} data-test-id="generate-meme">
+          Download
+        </button>
       </div>
     </div>
   );
